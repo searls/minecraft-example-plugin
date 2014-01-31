@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 echo "----> Building with Maven"
-mvn install -DskipTests
+mvn package -DskipTests
 
 echo "----> Uploading to Minecraft Server"
 scp target/everything-bucket*.jar home.testdouble.com:~/Documents/bukkit_server/plugins
