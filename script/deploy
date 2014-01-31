@@ -1,4 +1,9 @@
-#!/bin/bash
+#!/bin/bash -e
 
-mvn clean install -DskipTests
+echo "----> Building with Maven"
+mvn install -DskipTests
+
+echo "----> Uploading to Minecraft Server"
 scp target/everything-bucket*.jar home.testdouble.com:~/Documents/bukkit_server/plugins
+
+echo "----> Deploy complete! Type '/reload' in the game console to test your plugin"
