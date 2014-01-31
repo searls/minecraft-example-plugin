@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mvn clean install
+scp target/everything-bucket*.jar home.testdouble.com:~/Documents/bukkit_server/plugins
