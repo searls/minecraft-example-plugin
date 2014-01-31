@@ -1,8 +1,8 @@
 name: everything-bucket
 main: io.github.searls.EverythingBucket
-version: 0.1
+version: 0.0.1
 
 commands:
-   command:
-      description: A Command
-      usage: /<command>
+   random:
+      description: Generates a random block in front of the player
+      usage: /random

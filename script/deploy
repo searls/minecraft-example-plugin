@@ -1,4 +1,4 @@
 #!/bin/bash
 
-mvn clean install
+mvn clean install -DskipTests
 scp target/everything-bucket*.jar home.testdouble.com:~/Documents/bukkit_server/plugins
