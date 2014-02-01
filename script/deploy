@@ -1,9 +1,12 @@
 #!/bin/bash -e
 
+NAME="everything-bucket"
+VERSION="0.0.1-SNAPSHOT"
+
 echo "----> Building with Maven"
 mvn package -DskipTests
 
 echo "----> Uploading to Minecraft Server"
-scp target/everything-bucket*.jar "$MINECRAFT_SERVER:$MINECRAFT_SERVER_DIR"
+scp "target/$NAME-$VERSION-jar-with-dependencies.jar" "$MINECRAFT_SERVER:$MINECRAFT_SERVER_DIR/$NAME.jar"
 
 echo "----> Deploy complete! Type '/reload' in the game console to test your plugin"
