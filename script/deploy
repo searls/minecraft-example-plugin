@@ -4,6 +4,6 @@ echo "----> Building with Maven"
 mvn package -DskipTests
 
 echo "----> Uploading to Minecraft Server"
-scp target/everything-bucket*.jar home.testdouble.com:~/Documents/bukkit_server/plugins
+scp target/everything-bucket*.jar "$MINECRAFT_SERVER:$MINECRAFT_SERVER_DIR"
 
 echo "----> Deploy complete! Type '/reload' in the game console to test your plugin"
