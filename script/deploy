@@ -4,7 +4,7 @@ NAME="everything-bucket"
 VERSION="0.0.1-SNAPSHOT"
 
 echo "----> Building with Maven"
-mvn package -DskipTests
+mvn clean package -DskipTests
 
 echo "----> Uploading to Minecraft Server"
 scp "target/$NAME-$VERSION-jar-with-dependencies.jar" "$MINECRAFT_SERVER:$MINECRAFT_SERVER_DIR/$NAME.jar"

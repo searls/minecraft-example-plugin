@@ -1,5 +1,7 @@
 package io.github.searls;
 
+import javax.inject.Inject;
+
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -7,10 +9,10 @@ import org.bukkit.inventory.ItemStack;
 
 public class RandomCommand {
 
-	private GivesRandomItem givesRandomItem = new GivesRandomItem();
-	private GetsTarget getsTarget = new GetsTarget();
-	private DropsItem dropsItem = new DropsItem();
-	private SendsMessage sendsMessage = new SendsMessage();
+	@Inject GivesRandomItem givesRandomItem;
+	@Inject GetsTarget getsTarget;
+	@Inject DropsItem dropsItem;
+	@Inject SendsMessage sendsMessage;
 
 	public void run(Player player, World world) {
 		ItemStack item = givesRandomItem.give();

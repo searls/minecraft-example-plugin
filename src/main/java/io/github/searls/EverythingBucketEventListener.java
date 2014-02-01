@@ -10,8 +10,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class EverythingBucketEventListener implements Listener {
 
-	public EverythingBucketEventListener(EverythingBucket plugin) {}
-
 	@EventHandler
 	public void onLogin(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
