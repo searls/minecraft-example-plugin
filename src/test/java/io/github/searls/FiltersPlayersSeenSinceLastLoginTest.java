@@ -38,5 +38,6 @@ public class FiltersPlayersSeenSinceLastLoginTest {
 
 		assertTrue(result.contains(otherPlayer1));
 		assertTrue(result.contains(otherPlayer2));
+		assertFalse(result.contains(otherPlayer3));
 	}
 }
