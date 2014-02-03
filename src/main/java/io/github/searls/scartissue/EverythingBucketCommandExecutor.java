@@ -1,4 +1,6 @@
-package io.github.searls;
+package io.github.searls.scartissue;
+
+import io.github.searls.RandomCommand;
 
 import javax.inject.Inject;
 

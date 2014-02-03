@@ -1,4 +1,4 @@
-package io.github.searls;
+package io.github.searls.scartissue;
 
 import javax.inject.Singleton;
 

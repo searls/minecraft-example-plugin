@@ -1,5 +1,5 @@
 name: everything-bucket
-main: io.github.searls.EverythingBucket
+main: io.github.searls.scartissue.EverythingBucket
 version: 0.0.1
 
 commands:
