@@ -15,10 +15,10 @@ public class FiltersPlayersSeenSinceLastLogin {
 
 	@Inject QueriesPlayers queriesPlayers;
 
-	public Collection<OfflinePlayer> filter(final OfflinePlayer realPlayer) {
+	public Collection<OfflinePlayer> filter(final OfflinePlayer currentPlayer) {
 		return Collections2.filter(queriesPlayers.offlinePlayers(), new Predicate<OfflinePlayer>(){
 			@Override public boolean apply(OfflinePlayer p) {
-				return p.getLastPlayed() > realPlayer.getLastPlayed();
+				return p.getLastPlayed() > currentPlayer.getLastPlayed();
 			}
 		});
 	}
